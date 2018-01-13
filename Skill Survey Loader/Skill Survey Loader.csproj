@@ -58,12 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
+    <Compile Include="EventLogger.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SurveyLoader.cs" />
+    <Compile Include="SurveyExcelLoad.cs" />
     <Content Include="Data\AspectRatings.txt" />
     <Content Include="Data\Skills.txt" />
     <Content Include="Data\Aspects.txt" />

@@ -1,5 +1,4 @@
-﻿
-CREATE VIEW dbo.ResourceSurvey AS
+﻿CREATE VIEW dbo.SurveyResponse AS
 SELECT
   rs.ResourceUID
 , rs.SkillUID
@@ -14,7 +13,7 @@ FROM
       PARTITION BY rsx.ResourceUID, rsx.SkillUID, rsx.AspectUID
       ORDER BY rsx.SnapshotTimestamp Desc) AS FilterIndex
   FROM
-  dbo.ResourceSurveySnapshot rsx
+  dbo.SurveyResponseSnapshot rsx
 
 ) rs
 WHERE

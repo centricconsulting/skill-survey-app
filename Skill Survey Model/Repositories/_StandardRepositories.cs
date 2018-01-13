@@ -21,4 +21,10 @@ namespace Centric.SkillSurvey.Repositories
   {
     public SkillRepository(ApplicationContext Context) : base(Context) { }
   }
+
+  public class EventLogRepository : BaseRepository<EventLog>
+  {
+    public EventLogRepository(ApplicationContext Context) : base(Context) { }
+  }
+
 }

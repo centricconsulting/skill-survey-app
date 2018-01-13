@@ -50,5 +50,10 @@ namespace Centric.SkillSurvey.Models
         this.CentricEmployerFlag = value ? TRUE_FLAG_VALUE : FALSE_FLAG_VALUE;
       }
     }
+
+    public string GetRespondantInfo()
+    {
+      return string.Format("{0} | {1}", this.ResourceLabel, this.EmailAddress);
+    }
   }
 }

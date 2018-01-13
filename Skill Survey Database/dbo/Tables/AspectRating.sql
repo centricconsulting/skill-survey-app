@@ -1,11 +1,18 @@
 ﻿CREATE TABLE [dbo].[AspectRating] (
-    [AspectUID]       VARCHAR (200)  NOT NULL,
-    [RatingValue]     SMALLINT       NOT NULL,
-    [RatingName]      VARCHAR (200)  NOT NULL,
-    [RatingDesc]      VARCHAR (2000) NOT NULL,
-    [RatingLabel]     VARCHAR (200)  NOT NULL,
-    [CreateTimestamp] DATETIME2 (7)  DEFAULT (getdate()) NOT NULL,
-    [ModifyTimestamp] DATETIME2 (7)  DEFAULT (getdate()) NOT NULL,
-    CONSTRAINT [dbo_AspectRating_PK] PRIMARY KEY CLUSTERED ([AspectUID] ASC, [RatingValue] ASC)
+    [AspectUID]       NVARCHAR (128)  NOT NULL,
+    [RatingValue]     INT             NOT NULL,
+    [RatingName]      NVARCHAR (200)  NOT NULL,
+    [RatingLabel]     NVARCHAR (200)  NOT NULL,
+    [RatingDesc]      NVARCHAR (2000) NULL,
+    [CreateTimestamp] DATETIME        NOT NULL,
+    [ModifyTimestamp] DATETIME        NOT NULL,
+    CONSTRAINT [PK_dbo.AspectRating] PRIMARY KEY CLUSTERED ([AspectUID] ASC, [RatingValue] ASC)
 );
+
+
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [dbo_Rating_U1]
+    ON [dbo].[AspectRating]([AspectUID] ASC, [RatingName] ASC);
 

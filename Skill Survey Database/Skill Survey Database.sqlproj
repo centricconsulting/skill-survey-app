@@ -60,14 +60,28 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Views\" />
+    <Folder Include="cube" />
+    <Folder Include="cube\Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Skill.sql" />
     <Build Include="dbo\Tables\ResourceSnapshot.sql" />
     <Build Include="dbo\Tables\AspectRating.sql" />
     <Build Include="dbo\Tables\Aspect.sql" />
-    <Build Include="dbo\Tables\ResourceSurveySnapshot.sql" />
-    <Build Include="dbo\Views\ResourceSurvey.sql" />
     <Build Include="dbo\Views\Resource.sql" />
+    <Build Include="dbo\Tables\SurveyResponseSnapshot.sql" />
+    <Build Include="dbo\Tables\EventLog.sql" />
+    <Build Include="dbo\Views\SurveyResponse.sql" />
+    <Build Include="cube\Views\Skill.sql" />
+    <Build Include="cube\Views\Resource.sql" />
+    <Build Include="cube\Views\Capability.sql" />
+    <Build Include="cube\Views\Demand.sql" />
+    <Build Include="cube\Views\Staffing.sql" />
+    <Build Include="cube\Views\Plan.sql" />
+    <Build Include="cube.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database Comparer.scmp" />
+    <None Include="Skill Survey Database.publish.xml" />
   </ItemGroup>
 </Project>

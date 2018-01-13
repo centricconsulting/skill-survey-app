@@ -39,8 +39,9 @@ namespace Centric.SkillSurvey
     public virtual DbSet<Aspect> Aspects { get; set; }
     public virtual DbSet<AspectRating> AspectRatings { get; set; }
     public virtual DbSet<SurveyResponseSnapshot> SurveyResponseSnapshots { get; set; }
+    public virtual DbSet<EventLog> EventLogs { get; set; }
 
-  
+
     public void DropCreateViews()
     {
       this.DropCreateViewResource();

@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationContext.cs" />
-    <Compile Include="ApplicationDbInitializer.cs" />
+    <Compile Include="Models\EventLog.cs" />
     <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\SurveyResponseSnapshot.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

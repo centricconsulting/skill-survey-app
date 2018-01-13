@@ -1,5 +1,4 @@
-﻿
-CREATE VIEW dbo.[Resource] AS
+﻿CREATE VIEW dbo.[Resource] AS
 SELECT
   r.ResourceUID
 , r.EmployerDesc
@@ -10,6 +9,7 @@ SELECT
 , r.EmailAddress
 , r.CreateTimestamp
 , r.ModifyTimestamp
+, 'TEST' as x
 FROM
 (
   SELECT rs.*

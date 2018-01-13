@@ -35,5 +35,8 @@ namespace Centric.SkillSurvey.Models
     [Required]
     public int RatingValue { get; set; }
 
+    [MaxLength(2000)]
+    public string RespondantInfo { get; set; }
+
   }
 }
