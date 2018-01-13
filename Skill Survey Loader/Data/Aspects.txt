@@ -1,0 +1,4 @@
+﻿AspectUID|AspectCode|AspectName|AspectLabel|AspectDesc
+"PROFICIENCY"|"P"|"Proficiency"|"Proficiency"|"Expertise in a concept."
+"ADMINISTRATION"|"A"|"Administration"|"Admin/Config"|"Ability to adminiter or configure a concept."
+"INTEREST"|"V"|"Interest"|"Interest"|"Desire to develop expertise in a concept."

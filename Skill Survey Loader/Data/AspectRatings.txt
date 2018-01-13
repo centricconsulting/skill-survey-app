@@ -1,0 +1,11 @@
+﻿AspectUID|RatingValue|RatingName|RatingLabel|RatingDesc
+"PROFICIENCY"|0|"None"|"None"|"No signficant proficiency in the concept."
+"PROFICIENCY"|1|"Knowledgable"|"Knowledgable"|"Some knowledge with the concept (e.g. tutorial, training, limited delivery role, hobby)."
+"PROFICIENCY"|2|"Practitioner"|"Practitioner"|"Practitioner"|"Hands-on delivery experience with the concept."
+"PROFICIENCY"|3|"Leader"|"Leader"|"Has strong capability in the concept and can mentor others."
+"ADMINISTRATION"|0|"None"|"None"|"No signficant proficiency in the concept."
+"ADMINISTRATION"|1|"Knowledgable"|"Knowledgable"|"Some knowledge with the concept (e.g. tutorial, training, limited delivery role, hobby)."
+"ADMINISTRATION"|2|"Practitioner"|"Practitioner"|"Hands-on delivery experience with the concept."
+"INTEREST"|0|"None"|"None"|"No interest in learning the concept."
+"INTEREST"|1|"Interested"|"Interested"|"Interested to work with this concept in the future."
+"INTEREST"|2|"Passionate"|"Passionate"|"Interested to invest personal time to grow proficiency in the concept."
