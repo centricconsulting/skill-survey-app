@@ -1,0 +1,4 @@
+﻿SkillUID|SkillCode|SkillClassUID|SkillName|SkillCategoryName|SkillLabel|SkillDesc|OtherFlag
+"TE0001"|"TE0001"|"Technology"|"Alation Data Catalog"|"Alation"|"Alation Data Catalog"|"None."|0|
+"SA0011"|"SA0011"|"Subject Area"|"Investment Performance"|"Capital Management"|"Investment Performance"|"None."|0|
+
