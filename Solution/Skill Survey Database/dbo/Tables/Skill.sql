@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[Skill] (
+﻿CREATE TABLE [dbo].[Skill] (
     [SkillUID]          NVARCHAR (128)  NOT NULL,
     [SkillClassUID]     NVARCHAR (200)  NOT NULL,
     [SkillName]         NVARCHAR (200)  NOT NULL,
@@ -6,11 +6,13 @@ CREATE TABLE [dbo].[Skill] (
     [SkillCode]         NVARCHAR (20)   NOT NULL,
     [SkillDescription]  NVARCHAR (2000) NULL,
     [SkillCategoryName] NVARCHAR (200)  NOT NULL,
-    [OtherFlag]         BIT             NOT NULL,
+    [OtherFlag]         TINYINT         NOT NULL,
     [CreateTimestamp]   DATETIME        NOT NULL,
     [ModifyTimestamp]   DATETIME        NOT NULL,
     CONSTRAINT [PK_dbo.Skill] PRIMARY KEY CLUSTERED ([SkillUID] ASC)
 );
+
+
 
 
 
