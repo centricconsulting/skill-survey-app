@@ -102,7 +102,8 @@ namespace Centric.SkillSurvey
                 LoadSurveyResponses(ws.ListObjects["SubjectAreas"]);
                 break;
 
-              case "Method":
+              case "Discipline":
+              case "Method": // backward compatability
                 LoadSurveyResponses(ws.ListObjects["Methods"]);
                 break;
 
@@ -243,10 +244,8 @@ namespace Centric.SkillSurvey
         if (ProficiencyColumn != null)
         {
           ProficiencyValue = 0;
-          int.TryParse(row.Range.Cells[1, ProficiencyColumn].Text, out ProficiencyValue);
-
-          if (ProficiencyValue > 0)
-          {
+          if (int.TryParse(row.Range.Cells[1, ProficiencyColumn].Text, out ProficiencyValue))
+          { 
             list.Add(new SurveyResponseSnapshot()
             {
               SkillUID = SkillUID,
@@ -264,10 +263,8 @@ namespace Centric.SkillSurvey
         // gather interest if it exists in the table
         if (InterestColumn != null)
         {
-          InterestValue = 0;
-          int.TryParse(row.Range.Cells[1, InterestColumn].Text, out InterestValue);
-
-          if (InterestValue > 0)
+          InterestValue = 0;          
+          if (int.TryParse(row.Range.Cells[1, InterestColumn].Text, out InterestValue))
           {
             list.Add(new SurveyResponseSnapshot()
             {
@@ -286,10 +283,8 @@ namespace Centric.SkillSurvey
         // gather admin if it exists in the table
         if (AdminColumn != null)
         {
-          AdminValue = 0;
-          int.TryParse(row.Range.Cells[1, ProficiencyColumn].Text, out AdminValue);
-
-          if (AdminValue > 0)
+          AdminValue = 0;          
+          if (int.TryParse(row.Range.Cells[1, AdminColumn].Text, out AdminValue))
           {
             list.Add(new SurveyResponseSnapshot()
             {
