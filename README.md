@@ -3,11 +3,11 @@ Loads skill surveys from Excel files into a target database.
 
 ## Solution Folder
 Contains the .NET solution.
-### Skill Survey Loader
+### >> Skill Survey Loader
 Orchestrates load of Excel files into the target database, instructed by command line parameters.
-### Skill Survey Database
+### >> Skill Survey Database
 Database solution for the SQL Server database that holds that survey data.
-### Skill Survey Model
+### >> Skill Survey Model
 Object model and repositories used to interact with the database through Entity Framework.
 
 ## Application Folder
