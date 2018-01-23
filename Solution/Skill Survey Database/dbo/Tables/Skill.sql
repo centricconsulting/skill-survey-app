@@ -6,6 +6,7 @@
     [SkillCode]         NVARCHAR (20)   NOT NULL,
     [SkillDescription]  NVARCHAR (2000) NULL,
     [SkillCategoryName] NVARCHAR (200)  NOT NULL,
+    [SkillTagList]      NVARCHAR(2000)  NULL,
     [OtherFlag]         TINYINT         NOT NULL,
     [CreateTimestamp]   DATETIME        NOT NULL,
     [ModifyTimestamp]   DATETIME        NOT NULL,

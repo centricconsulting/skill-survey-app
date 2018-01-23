@@ -8,10 +8,12 @@ using Centric.SkillSurvey.Repositories;
 using System.Configuration;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
+using Shell32;
 using System.Runtime.InteropServices;
 
 namespace Centric.SkillSurvey
 {
+  
   class Program
   {
     private static string SourceFolderPath;
@@ -23,10 +25,13 @@ namespace Centric.SkillSurvey
     private static string FailedFolderName = "Failed";
     private static string FailedFolderPath;
     private static bool TransferFiles;
-    
+
+    private static Shell32.Shell Shell;
+
+    [STAThread]
     static void Main(string[] args)
     {
-    
+
       CollectCommandLineParameters(args);
       VerifyTargetPaths();
 
@@ -36,9 +41,9 @@ namespace Centric.SkillSurvey
       Bootstrap.Execute(AppContext);
 
       ProcessExcelFiles(AppContext);
-      
+
     }
-    
+
 
     private static void CollectCommandLineParameters(string[] args)
     {
@@ -51,7 +56,7 @@ namespace Centric.SkillSurvey
         {
           switch (arg)
           {
-            case "--file":
+            case "--source-file":
               Program.SourceFilePath = args[argpos + 1].Replace("\"", "");
               break;
 
@@ -67,7 +72,7 @@ namespace Centric.SkillSurvey
               Program.ArchiveFolderPath = args[argpos + 1].Replace("\"", "");
               break;
 
-            case "--failed":
+            case "--fail":
               Program.FailedFolderPath = args[argpos + 1].Replace("\"", "");
               break;
 
@@ -75,7 +80,7 @@ namespace Centric.SkillSurvey
               Program.ArchiveFolderName = args[argpos + 1].Replace("\"", "");
               break;
 
-            case "--failed-name":
+            case "--fail-name":
               Program.FailedFolderName = args[argpos + 1].Replace("\"", "");
               break;
 
@@ -86,17 +91,17 @@ namespace Centric.SkillSurvey
               {
                 Console.WriteLine("--help                     Display help menu.\r\n");
                 Console.WriteLine("--transfer                 Directive to transfer files to archive or failed paths after processing.");
-                Console.WriteLine("--file {path}              Individual file to process.");
+                Console.WriteLine("--source-file {path}       Individual file to process.");
                 Console.WriteLine("--source {path}            Folder path to process.");
                 Console.WriteLine("--archive {path}           Path to move files after successful processing.");
-                Console.WriteLine("--failed {path}            Path to move files after failed processing.");
+                Console.WriteLine("--fail {path}              Path to move files after failed processing.");
                 Console.WriteLine("--archive-name {folder}    Leaf folder name appended to the source path to derive the archive path.");
-                Console.WriteLine("--failed-name {folder}     Leaf folder name appended to the source path to derive the failed path.");
+                Console.WriteLine("--fail-name {folder}       Leaf folder name appended to the source path to derive the failed path.");
                 if (Console.Out != null) Console.Out.Flush();
                 System.Environment.Exit(1);
               }
 
-              break;
+              return;
 
             default:
               break;
@@ -136,7 +141,7 @@ namespace Centric.SkillSurvey
         {
 
           // verify the source folder path is provided
-          if (SourceFilePath == null)
+          if (SourceFolderPath == null)
           {
             throw new ApplicationException("Unable to derive the archive folder path");
           }
@@ -162,7 +167,7 @@ namespace Centric.SkillSurvey
         {
 
           // verify the source folder path is provided
-          if (SourceFilePath == null)
+          if (SourceFolderPath == null)
           {
             throw new ApplicationException("Unable to derive the archive folder path");
           }
@@ -193,19 +198,25 @@ namespace Centric.SkillSurvey
 
     private static void ProcessExcelFiles(ApplicationContext AppContext)
     {
+
+      Program.Shell = new Shell32.Shell();
       Excel.Application ExcelApp = null;
 
       try
       {
         EventLogger.Log(AppContext, "Start", "Excel", "Start Excel application");
 
+#pragma warning disable IDE0017 // Simplify object initialization
         ExcelApp = new Excel.Application();
+#pragma warning restore IDE0017 // Simplify object initialization
+
         ExcelApp.Visible = false;
 
         // loop through relevant files
-        foreach(string ExcelFilePath in RetrieveExcelFilePaths())
+        // sort by write date
+        foreach (var FileInfo in RetrieveExcelFileInfoList().OrderBy(x => x.Value))
         {
-          ProcessExcelFile(ExcelApp, AppContext, ExcelFilePath);
+          ProcessExcelFile(ExcelApp, AppContext, FileInfo.Key);
         }
 
       }
@@ -220,31 +231,32 @@ namespace Centric.SkillSurvey
         Marshal.FinalReleaseComObject(ExcelApp);
       }
 
-      
+
     }
 
-    private static List<string> RetrieveExcelFilePaths()
+    private static Dictionary<string, DateTime> RetrieveExcelFileInfoList()
     {
 
-      List<string> ExcelFilePaths = null;
+      Dictionary<string, DateTime> FileInfoList = new Dictionary<string, DateTime>();
 
       // process the source folder if applicable
       if (Program.SourceFolderPath != null)
       {
-        ExcelFilePaths = Directory.GetFiles(Program.SourceFolderPath, "*.xls*").ToList<string>();
-      }
-      else
-      {
-        ExcelFilePaths = new List<string>();
+        string[] Files = Directory.GetFiles(Program.SourceFolderPath, "*.xls*").ToArray<string>();
+
+        foreach (string file in Files)
+        {
+          FileInfoList.Add(file, Program.GetLastSavedByDate(file));
+        }
       }
 
       // add the source file if applicable
-      if (SourceFilePath!= null && !ExcelFilePaths.Exists(x => x.Equals(SourceFilePath)))
+      if (SourceFilePath != null && !FileInfoList.Keys.Contains(SourceFilePath))
       {
-        ExcelFilePaths.Add(SourceFilePath);
+        FileInfoList.Add(SourceFilePath, Directory.GetLastWriteTime(SourceFilePath));
       }
-      
-      return ExcelFilePaths;
+
+      return FileInfoList;
 
     }
 
@@ -252,7 +264,7 @@ namespace Centric.SkillSurvey
     {
 
       SurveyExcelLoad loader = null;
-      
+
       try
       {
         EventLogger.Log(AppContext, "Started", ExcelFilePath, "Starting the loader.");
@@ -261,13 +273,9 @@ namespace Centric.SkillSurvey
         loader.Load(ExcelApp);
 
         // post-processing file management
-        
+
         if (Program.TransferFiles)
         {
-
-          string FileExtension = Path.GetExtension(ExcelFilePath);
-          string FileNameRaw = Path.GetFileNameWithoutExtension(ExcelFilePath);
-          string TargetFileName = FileNameRaw + "." + (Guid.NewGuid().ToString("D")) + FileExtension;
 
           // transfer files to proper target path
           if (loader.LoadSucceed)
@@ -275,37 +283,87 @@ namespace Centric.SkillSurvey
             // move to archive folder
             EventLogger.Log(AppContext, "File", ExcelFilePath, "Moving to archive folder.");
 
-            // delete old target path if exists
-            string TargetPath = Path.Combine(ArchiveFolderPath, TargetFileName);
-            if (File.Exists(TargetPath)) File.Delete(TargetPath);
+            // if the file exists, create a new version
+            string TargetFilePath = Path.Combine(Program.ArchiveFolderPath, Path.GetFileName(ExcelFilePath));
+            if (File.Exists(TargetFilePath))
+            {
+              TargetFilePath = Path.Combine(Program.ArchiveFolderPath,
+                Path.GetFileNameWithoutExtension(ExcelFilePath) + "_" +
+                DateTime.Now.ToString("yyyyMMddHHmmssffffff") + '.' +
+                Path.GetExtension(ExcelFilePath));
+            }
 
-            Directory.Move(ExcelFilePath, TargetPath);
+            Directory.Move(ExcelFilePath, TargetFilePath);
           }
           else
           {
             // move to failed folder
             EventLogger.Log(AppContext, "File", ExcelFilePath, "Moving to failed folder.");
 
-            // delete old target path if exists
-            string TargetPath = Path.Combine(FailedFolderPath, TargetFileName);
-            if (File.Exists(TargetPath)) File.Delete(TargetPath);
 
-            Directory.Move(ExcelFilePath, TargetPath);
+            // if the file exists, create a new version
+            string TargetFilePath = Path.Combine(Program.FailedFolderPath, Path.GetFileName(ExcelFilePath));
+            if (File.Exists(TargetFilePath))
+            {
+              TargetFilePath = Path.Combine(Program.FailedFolderPath,
+                Path.GetFileNameWithoutExtension(ExcelFilePath) + "_" +
+                DateTime.Now.ToString("yyyyMMddHHmmssffffff") + '.' +
+                Path.GetExtension(ExcelFilePath));
+            }
+
+            Directory.Move(ExcelFilePath, TargetFilePath);
           }
         }
-       
+
         EventLogger.Log(AppContext, "Finished", ExcelFilePath, "Load is complete.");
       }
       catch (Exception ex)
       {
         EventLogger.Log(AppContext, "Error", ExcelFilePath, "Error: " + ex.Message);
       }
-      finally
-      {
-        ExcelApp.Quit();
-      }
     }
 
+    private static DateTime GetLastSavedByDate(string FilePath)
+    {
 
+      //https://blog.dotnetframework.org/2014/12/10/read-extended-properties-of-a-file-in-c/
+      //https://stackoverflow.com/questions/10950477/how-can-i-optimize-shell32-method-calls
+
+      List<string> AttributeList = new List<string>();
+
+      Folder Folder = Program.Shell.NameSpace(Path.GetDirectoryName(FilePath));
+      string FileName = Path.GetFileName(FilePath);
+
+      // find the correct file index
+      for (int i = 0; i < Folder.Items().Count - 1; i++)
+      {
+
+        FolderItem FolderItem = Folder.Items().Item(i);
+        if (FolderItem.Name.Equals(FileName))
+        {
+
+          for (int ia = 0; ia < short.MaxValue; ia++)
+          {
+            string header = Folder.GetDetailsOf(null, ia);
+
+            if (header.Equals("Date last saved"))
+            {
+              string value = Folder.GetDetailsOf(FolderItem, ia);
+              string DateValue = string.Empty;
+              foreach(Char c in value.ToCharArray())
+              {
+                if ((int)c < 255) DateValue = DateValue + c;
+              }
+
+              return DateTime.Parse(DateValue);
+            }
+          }
+        }
+      }
+
+      // default is the last access time of the file
+      return Directory.GetLastAccessTime(FilePath);
+    }
+      
   }
 }

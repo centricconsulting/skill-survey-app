@@ -11,6 +11,12 @@ namespace Centric.SkillSurvey.Repositories
   {
     public ResourceSnapshotRepository(ApplicationContext Context) : base(Context) { }
 
+    public bool ResourceExists(string ResourceUID)
+    {
+      return this.AppContext.ResourceSnapshots
+        .Any(x => x.ResourceUID.Equals(ResourceUID));
+    }
+
     public bool SnapshotExists(string ResourceUID, DateTime SnapshotTimestamp)
     {
       return this.AppContext.ResourceSnapshots

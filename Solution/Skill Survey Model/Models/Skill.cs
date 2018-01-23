@@ -39,6 +39,9 @@ namespace Centric.SkillSurvey.Models
     [Required, MaxLength(200)]
     public string SkillCategoryName { get; set; }
 
+    [Required, MaxLength(2000)]
+    public String SkillTagList { get; set; }
+
     [Required]
     public Byte OtherFlag { get; set; }
     [NotMapped]

@@ -19,6 +19,6 @@ namespace Centric.SkillSurvey.Models
     public string AspectUID { get; set; }
     public DateTime SnapshotTimestamp { get; set; }
     public int RatingValue { get; set; }
-    public string RespondantInfo { get; set; }
+    public string RespondentInfo { get; set; }
   }
 }

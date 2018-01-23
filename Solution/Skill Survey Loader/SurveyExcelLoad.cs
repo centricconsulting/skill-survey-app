@@ -16,9 +16,9 @@ namespace Centric.SkillSurvey
     public SnapshotExistsException(string Message) : base(Message) { }
   }
 
-  public class InvalidRespondantException : Exception
+  public class InvalidRespondentException : Exception
   {
-    public InvalidRespondantException(string Message) : base(Message) { }
+    public InvalidRespondentException(string Message) : base(Message) { }
   }
 
 
@@ -28,7 +28,7 @@ namespace Centric.SkillSurvey
     private ApplicationContext AppContext;
     private string ExcelFilePath = null;
     private string ExcelFileName = null;
-    private ResourceSnapshot Respondant = null;
+    private ResourceSnapshot Respondent = null;
 
     public bool LoadSucceed { get; set; } = false;
 
@@ -38,7 +38,7 @@ namespace Centric.SkillSurvey
       this.AppContext = AppContext;
       this.ExcelFilePath = ExcelFilePath;
       this.ExcelFileName = System.IO.Path.GetFileName(ExcelFilePath);
-      this.Respondant = new ResourceSnapshot();
+      this.Respondent = new ResourceSnapshot();
 
     }
 
@@ -58,33 +58,49 @@ namespace Centric.SkillSurvey
 
 
         // populate the resource snapshot info
-        EventLogger.Log(this.AppContext, "File", this.ExcelFileName, "Loading respondant information.");
+        EventLogger.Log(this.AppContext, "File", this.ExcelFileName, "Loading Respondent information.");
 
-        this.Respondant.EmailAddress = GetNameValue(wb, "Email");
-        this.Respondant.ResourceUID = this.Respondant.EmailAddress;
-        this.Respondant.ResourceLabel = GetNameValue(wb, "FullName");
-        this.Respondant.SnapshotTimestamp = GetFileModifyTimestamp(ExcelFilePath);
+        this.Respondent.EmailAddress = GetNameValue(wb, "Email");
+        this.Respondent.ResourceUID = this.Respondent.EmailAddress;
+        this.Respondent.ResourceLabel = GetNameValue(wb, "FullName");
+        // use the processing date as the snapshot time
+        this.Respondent.SnapshotTimestamp = DateTime.Now;
 
-        // determine if the respondant is valid
-        if (this.Respondant.ResourceUID == null || this.Respondant.ResourceUID.Length < 1)
+        // determine if the Respondent is valid
+        if (this.Respondent.ResourceUID == null || this.Respondent.ResourceUID.Length < 1)
         {
-          throw new InvalidRespondantException("The respondant identifier is missing.");
+          throw new InvalidRespondentException("The Respondent identifier is missing.");
         }
+
+        // add the respondent i
+        ResourceSnapshotRepository rrepo = new ResourceSnapshotRepository(this.AppContext);
+        if(!rrepo.ResourceExists(this.Respondent.ResourceUID))
+        {
+
+          EventLogger.Log(this.AppContext, "File", this.ExcelFileName, string.Format("Adding resource {0}", this.Respondent.ResourceUID));
+
+          AppContext.ResourceSnapshots.Add(new ResourceSnapshot()
+          {
+            ResourceUID = this.Respondent.ResourceUID,
+            ResourceLabel = this.Respondent.ResourceLabel,
+            SnapshotTimestamp = this.Respondent.SnapshotTimestamp,
+            EmailAddress = this.Respondent.EmailAddress
+          });
+        }        
 
         // halt the process if the survey response already exists
         EventLogger.Log(this.AppContext, "File", this.ExcelFileName, "Verify the survey snapshot does not already exist.");
 
         SurveyResponseSnapshotRepository srsrepo = new SurveyResponseSnapshotRepository(this.AppContext);
-        if (srsrepo.SnapshotExists(this.Respondant.ResourceUID, this.Respondant.SnapshotTimestamp))
+        if (srsrepo.SnapshotExists(this.Respondent.ResourceUID, this.Respondent.SnapshotTimestamp))
         {
 
           EventLogger.Log(this.AppContext, "File", this.ExcelFileName, "Snapshot already exists. Exiting.");
 
           throw new SnapshotExistsException(
-            string.Format("The snapshot for user \"{0}\" already exists in the system.", this.Respondant.ResourceUID));
+            string.Format("The snapshot for user \"{0}\" already exists in the system.", this.Respondent.ResourceUID));
         }
 
-        EventLogger.Log(this.AppContext, "File", this.ExcelFileName, "Looping through worksheets");
 
         // loop through the workbooks
         foreach (Excel.Worksheet ws in wb.Worksheets)
@@ -121,7 +137,7 @@ namespace Centric.SkillSurvey
             }
           }
 
-          Marshal.FinalReleaseComObject(wb);
+          //Marshal.FinalReleaseComObject(wb);
 
         }
 
@@ -137,7 +153,6 @@ namespace Centric.SkillSurvey
       {
         EventLogger.Log(this.AppContext, "File", this.ExcelFileName, "Closing the Excel workbook.");
         wb.Close();
-        Marshal.FinalReleaseComObject(wb);
       }
 
     }
@@ -217,7 +232,7 @@ namespace Centric.SkillSurvey
       int AdminValue = 0;
       int LineCount = 0;
       int ProcessedLineCount = 0;
-      string RespondantInfo = this.Respondant.GetRespondantInfo();
+      string RespondentInfo = this.Respondent.GetRespondentInfo();
 
       bool OtherSkillFlag = false;
 
@@ -250,10 +265,10 @@ namespace Centric.SkillSurvey
             {
               SkillUID = SkillUID,
               AspectUID = "PROFICIENCY",
-              ResourceUID = this.Respondant.ResourceUID,
-              SnapshotTimestamp = this.Respondant.SnapshotTimestamp,
+              ResourceUID = this.Respondent.ResourceUID,
+              SnapshotTimestamp = this.Respondent.SnapshotTimestamp,
               RatingValue = ProficiencyValue,
-              RespondantInfo = RespondantInfo,
+              RespondentInfo = RespondentInfo,
               OtherSkillInfo = (OtherSkillFlag) ? SkillName : null
             });
             ProcessedLineCount++;
@@ -270,10 +285,10 @@ namespace Centric.SkillSurvey
             {
               SkillUID = SkillUID,
               AspectUID = "INTEREST",
-              ResourceUID = this.Respondant.ResourceUID,
-              SnapshotTimestamp = this.Respondant.SnapshotTimestamp,
+              ResourceUID = this.Respondent.ResourceUID,
+              SnapshotTimestamp = this.Respondent.SnapshotTimestamp,
               RatingValue = InterestValue,
-              RespondantInfo = RespondantInfo,
+              RespondentInfo = RespondentInfo,
               OtherSkillInfo = (OtherSkillFlag) ? SkillName : null
             });
             ProcessedLineCount++;
@@ -290,10 +305,10 @@ namespace Centric.SkillSurvey
             {
               SkillUID = SkillUID,
               AspectUID = "ADMINISTRATION",
-              ResourceUID = this.Respondant.ResourceUID,
-              SnapshotTimestamp = this.Respondant.SnapshotTimestamp,
+              ResourceUID = this.Respondent.ResourceUID,
+              SnapshotTimestamp = this.Respondent.SnapshotTimestamp,
               RatingValue = AdminValue,
-              RespondantInfo = RespondantInfo,
+              RespondentInfo = RespondentInfo,
               OtherSkillInfo = (OtherSkillFlag) ? SkillName : null
             });
             ProcessedLineCount++;
@@ -308,7 +323,7 @@ namespace Centric.SkillSurvey
         new SurveyResponseSnapshotRepository(this.AppContext).InsertAll(list);
       }
 
-      EventLogger.Log(this.AppContext, "Respondant", this.Respondant.ResourceUID,
+      EventLogger.Log(this.AppContext, "Respondent", this.Respondent.ResourceUID,
         string.Format("Processed {1} of {2} rows from {0} table.",
         table.Name, ProcessedLineCount.ToString(), LineCount.ToString()));
 

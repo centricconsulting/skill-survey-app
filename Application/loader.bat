@@ -1,1 +1,1 @@
-"Centric Skill Survey Loader.exe"  --file "C:\Development\Solutions\GitHub\skill-survey-app\Application\Sample\Centric D&A Skill Assessment - Test.xlsm"
+"C:\Development\Solutions\GitHub\skill-survey-app\Application\Centric Skill Survey Loader.exe"  --transfer --source "C:\OneDrive\OneDrive - Centric Consulting\Working\Skill Assessment Files" --archive-name "Archived" --fail-name "Failed" 

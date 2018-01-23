@@ -33,7 +33,7 @@ namespace Centric.SkillSurvey.Models
     public string OtherSkillInfo { get; set; }
 
     [MaxLength(2000)]
-    public string RespondantInfo { get; set; }
+    public string RespondentInfo { get; set; }
 
   }
 }

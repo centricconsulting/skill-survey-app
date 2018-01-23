@@ -1,4 +1,294 @@
-﻿SkillUID|SkillCode|SkillClassUID|SkillName|SkillCategoryName|SkillLabel|SkillDesc|OtherFlag
-"TE0001"|"TE0001"|"Technology"|"Alation Data Catalog"|"Alation"|"Alation Data Catalog"|"None."|0|
-"SA0011"|"SA0011"|"Subject Area"|"Investment Performance"|"Capital Management"|"Investment Performance"|"None."|0|
-
+﻿SkillUID|SkillCode|SkillClassUID|SkillName|SkillCategoryName|SkillLabel|SkillDesc|SkillTagList|OtherFlag
+"TE0001"|"TE0001"|"TECHNOLOGY"|"Alation Data Catalog"|"Alation"|"Alation Data Catalog"|""|"alation, data catalog"|0
+"TE0002"|"TE0002"|"TECHNOLOGY"|"AWS Data Pipeline"|"Amazon AWS"|"AWS Data Pipeline"|""|"aws, aws data pdipeline"|0
+"TE0003"|"TE0003"|"TECHNOLOGY"|"AWS EC2"|"Amazon AWS"|"AWS EC2 (VM)"|""|"aws, ec2, cloud vm"|0
+"TE0004"|"TE0004"|"TECHNOLOGY"|"AWS Elastic Map Reduce (EMR)"|"Amazon AWS"|"AWS Elastic Map Reduce (EMR)"|""|"aws, elastic map reduce, emr"|0
+"TE0005"|"TE0005"|"TECHNOLOGY"|"AWS Glue"|"Amazon AWS"|"AWS Glue"|""|"aws glue"|0
+"TE0006"|"TE0006"|"TECHNOLOGY"|"AWS Lambda"|"Amazon AWS"|"AWS Lambda"|""|"aws lambda"|0
+"TE0007"|"TE0007"|"TECHNOLOGY"|"AWS RDS (Database)"|"Amazon AWS"|"AWS RDS (Database)"|""|"aws rds (database)"|0
+"TE0008"|"TE0008"|"TECHNOLOGY"|"AWS Redshift"|"Amazon AWS"|"AWS Redshift"|""|"aws redshift"|0
+"TE0009"|"TE0009"|"TECHNOLOGY"|"AWS S3 (Storage)"|"Amazon AWS"|"AWS S3 (Storage)"|""|"aws s3 (storage)"|0
+"TE0010"|"TE0010"|"TECHNOLOGY"|"Apache Atlas (Data Governace)"|"Apache"|"Apache Atlas (Data Governace)"|""|"apache atlas (data governace)"|0
+"TE0011"|"TE0011"|"TECHNOLOGY"|"Apache Cassandra"|"Apache"|"Apache Cassandra"|""|"apache cassandra"|0
+"TE0012"|"TE0012"|"TECHNOLOGY"|"Apache CouchDB"|"Apache"|"Apache CouchDB"|""|"apache couchdb"|0
+"TE0013"|"TE0013"|"TECHNOLOGY"|"Apache Flume"|"Apache"|"Apache Flume"|""|"apache flume"|0
+"TE0014"|"TE0014"|"TECHNOLOGY"|"Apache Hadoop HDFS"|"Apache"|"Apache Hadoop HDFS"|""|"apache hadoop hdfs"|0
+"TE0015"|"TE0015"|"TECHNOLOGY"|"Apache Hadoop Security"|"Apache"|"Apache Hadoop Security"|""|"apache hadoop security"|0
+"TE0016"|"TE0016"|"TECHNOLOGY"|"Apache Hbase"|"Apache"|"Apache Hbase"|""|"apache hbase"|0
+"TE0017"|"TE0017"|"TECHNOLOGY"|"Apache Hive"|"Apache"|"Apache Hive"|""|"apache hive"|0
+"TE0018"|"TE0018"|"TECHNOLOGY"|"Apache Impala"|"Apache"|"Apache Impala"|""|"apache impala"|0
+"TE0019"|"TE0019"|"TECHNOLOGY"|"Apache Kafka"|"Apache"|"Apache Kafka"|""|"apache kafka"|0
+"TE0020"|"TE0020"|"TECHNOLOGY"|"Apache Nifi"|"Apache"|"Apache Nifi"|""|"apache nifi"|0
+"TE0021"|"TE0021"|"TECHNOLOGY"|"Apache Pig"|"Apache"|"Apache Pig"|""|"apache pig"|0
+"TE0022"|"TE0022"|"TECHNOLOGY"|"Apache Spark"|"Apache"|"Apache Spark"|""|"apache spark"|0
+"TE0023"|"TE0023"|"TECHNOLOGY"|"Apache Storm"|"Apache"|"Apache Storm"|""|"apache storm"|0
+"TE0024"|"TE0024"|"TECHNOLOGY"|"Attacama Data Quality"|"Ataccama"|"Attacama Data Quality"|""|"attacama data quality"|0
+"TE0025"|"TE0025"|"TECHNOLOGY"|"Cloudera Hadoop Platform"|"Cloudera"|"Cloudera Hadoop Platform"|""|"cloudera hadoop platform"|0
+"TE0026"|"TE0026"|"TECHNOLOGY"|"Collibra Data Governance Center"|"Collibra"|"Collibra Data Governance Center"|""|"collibra data governance center"|0
+"TE0027"|"TE0027"|"TECHNOLOGY"|"Couchbase"|"Couchbase"|"Couchbase"|""|"couchbase"|0
+"TE0028"|"TE0028"|"TECHNOLOGY"|"Spark (Analysis)"|"Data Bricks"|"Spark (Analysis)"|""|"spark (analysis)"|0
+"TE0029"|"TE0029"|"TECHNOLOGY"|"Spark (Data Processing)"|"Data Bricks"|"Spark (Data Processing)"|""|"spark (data processing)"|0
+"TE0030"|"TE0030"|"TECHNOLOGY"|"Hortonworks Hadoop Platform"|"Hortonworks"|"Hortonworks Hadoop Platform"|""|"hortonworks hadoop platform"|0
+"TE0031"|"TE0031"|"TECHNOLOGY"|"IBM Business Glossary"|"IBM Infosphere"|"IBM Business Glossary"|""|"ibm business glossary"|0
+"TE0032"|"TE0032"|"TECHNOLOGY"|"IBM Cognos 11"|"IBM Infosphere"|"IBM Cognos 11"|""|"ibm cognos 11"|0
+"TE0033"|"TE0033"|"TECHNOLOGY"|"IBM Data Governance"|"IBM Infosphere"|"IBM Data Governance"|""|"ibm data governance"|0
+"TE0034"|"TE0034"|"TECHNOLOGY"|"IBM Data Stage (ETL)"|"IBM Infosphere"|"IBM Data Stage (ETL)"|""|"ibm data stage (etl)"|0
+"TE0035"|"TE0035"|"TECHNOLOGY"|"IBM Master Data Management"|"IBM Infosphere"|"IBM Master Data Management"|""|"ibm master data management"|0
+"TE0036"|"TE0036"|"TECHNOLOGY"|"Informatica Cloud Services"|"Informatica"|"Informatica Cloud Services"|""|"informatica cloud services"|0
+"TE0037"|"TE0037"|"TECHNOLOGY"|"Informatica Data Quality"|"Informatica"|"Informatica Data Quality"|""|"informatica data quality"|0
+"TE0038"|"TE0038"|"TECHNOLOGY"|"Informatica Identity Resolution"|"Informatica"|"Informatica Identity Resolution"|""|"informatica identity resolution"|0
+"TE0039"|"TE0039"|"TECHNOLOGY"|"Informatica Multi-Domain MDM"|"Informatica"|"Informatica Multi-Domain MDM"|""|"informatica multi-domain mdm"|0
+"TE0040"|"TE0040"|"TECHNOLOGY"|"Informatica PowerCenter (ETL)"|"Informatica"|"Informatica PowerCenter (ETL)"|""|"informatica powercenter (etl)"|0
+"TE0041"|"TE0041"|"TECHNOLOGY"|"Knime Data Transformation"|"Knime"|"Knime Data Transformation"|""|"knime data transformation"|0
+"TE0042"|"TE0042"|"TECHNOLOGY"|"Looker Data Visualization"|"Looker"|"Looker Data Visualization"|""|"looker data visualization"|0
+"TE0043"|"TE0043"|"TECHNOLOGY"|"Microstrategy"|"Microstrategy"|"Microstrategy"|""|"microstrategy"|0
+"TE0044"|"TE0044"|"TECHNOLOGY"|"MongoDB"|"MongoDB"|"MongoDB"|""|"mongodb"|0
+"TE0045"|"TE0045"|"TECHNOLOGY"|"Azure Active Directory"|"MS Azure"|"Azure Active Directory"|""|"azure active directory"|0
+"TE0046"|"TE0046"|"TECHNOLOGY"|"Azure Analysis Services"|"MS Azure"|"Azure Analysis Services"|""|"azure analysis services"|0
+"TE0047"|"TE0047"|"TECHNOLOGY"|"Azure Data Factory"|"MS Azure"|"Azure Data Factory"|""|"azure data factory"|0
+"TE0048"|"TE0048"|"TECHNOLOGY"|"Azure Data Lake / HDInsight"|"MS Azure"|"Azure Data Lake / HDInsight"|""|"azure data lake / hdinsight"|0
+"TE0049"|"TE0049"|"TECHNOLOGY"|"Azure Data Warehouse"|"MS Azure"|"Azure Data Warehouse"|""|"azure data warehouse"|0
+"TE0050"|"TE0050"|"TECHNOLOGY"|"Azure IoT Hub"|"MS Azure"|"Azure IoT Hub"|""|"azure iot hub"|0
+"TE0051"|"TE0051"|"TECHNOLOGY"|"Azure Machine Learning"|"MS Azure"|"Azure Machine Learning"|""|"azure machine learning"|0
+"TE0052"|"TE0052"|"TECHNOLOGY"|"Azure Solution Architecture"|"MS Azure"|"Azure Solution Architecture"|""|"azure solution architecture"|0
+"TE0053"|"TE0053"|"TECHNOLOGY"|"Azure SQL Server"|"MS Azure"|"Azure SQL Server"|""|"azure sql server"|0
+"TE0054"|"TE0054"|"TECHNOLOGY"|"Azure Stream Analytics"|"MS O365"|"Azure Stream Analytics"|""|"azure stream analytics"|0
+"TE0055"|"TE0055"|"TECHNOLOGY"|"Power BI"|"MS O365"|"Power BI"|""|"power bi"|0
+"TE0056"|"TE0056"|"TECHNOLOGY"|"SQL Server Analysis Services (Multi-Dimensional)"|"MS SQL Server"|"SQL Server Analysis Services (Multi-Dimensional)"|""|"sql server, analysis services, multi-dimensional, SSAS"|0
+"TE0057"|"TE0057"|"TECHNOLOGY"|"SQL Server Analysis Services (Tabular)"|"MS SQL Server"|"SQL Server Analysis Services (Tabular)"|""|"sql server, sql server analysis services, tabular, SSAS"|0
+"TE0058"|"TE0058"|"TECHNOLOGY"|"SQL Server Data Quality Services"|"MS SQL Server"|"SQL Server Data Quality Services"|""|"sql server, sql server data quality services, DQS"|0
+"TE0059"|"TE0059"|"TECHNOLOGY"|"SQL Server Database"|"MS SQL Server"|"SQL Server Database"|""|"sql serve, sql server database"|0
+"TE0060"|"TE0060"|"TECHNOLOGY"|"SQL Server Intergration Services"|"MS SQL Server"|"SQL Server Intergration Services"|""|"sql server intergration services"|0
+"TE0061"|"TE0061"|"TECHNOLOGY"|"SQL Server Master Data Services"|"MS SQL Server"|"SQL Server Master Data Services"|""|"sql server master data services"|0
+"TE0062"|"TE0062"|"TECHNOLOGY"|"SQL Server Reporting Services"|"MS SQL Server"|"SQL Server Reporting Services"|""|"sql server reporting services"|0
+"TE0063"|"TE0063"|"TECHNOLOGY"|"Oracle BI Enterprise Edition (OBIEE)"|"Oracle"|"Oracle BI Enterprise Edition (OBIEE)"|""|"oracle bi enterprise edition (obiee)"|0
+"TE0064"|"TE0064"|"TECHNOLOGY"|"Oracle Data Integrator"|"Oracle"|"Oracle Data Integrator"|""|"oracle data integrator"|0
+"TE0065"|"TE0065"|"TECHNOLOGY"|"Oracle Exadata"|"Oracle"|"Oracle Exadata"|""|"oracle exadata"|0
+"TE0066"|"TE0066"|"TECHNOLOGY"|"Pentaho Kettle (ETL)"|"Pentaho"|"Pentaho Kettle (ETL)"|""|"pentaho kettle (etl)"|0
+"TE0067"|"TE0067"|"TECHNOLOGY"|"Pentaho Reporting"|"Pentaho"|"Pentaho Reporting"|""|"pentaho reporting"|0
+"TE0068"|"TE0068"|"TECHNOLOGY"|"QlikSense"|"Qlik"|"QlikSense"|""|"qliksense"|0
+"TE0069"|"TE0069"|"TECHNOLOGY"|"QlikView"|"Qlik"|"QlikView"|""|"qlikview"|0
+"TE0070"|"TE0070"|"TECHNOLOGY"|"R"|"R Project"|"R"|""|"r, statistical analysis, predictive modeling"|0
+"TE0071"|"TE0071"|"TECHNOLOGY"|"SAS Analytics Tools"|"SAS"|"SAS Analytics Tools"|""|"sas, statistical analysis, predictive modeling"|0
+"TE0072"|"TE0072"|"TECHNOLOGY"|"Snowflake Data Warehouse"|"Snowflake"|"Snowflake Data Warehouse"|""|"snowflake"|0
+"TE0073"|"TE0073"|"TECHNOLOGY"|"Tableau"|"Tableau"|"Tableau"|""|"tableau"|0
+"TE0074"|"TE0074"|"TECHNOLOGY"|"Talend Big Data ETL"|"Talend"|"Talend Big Data ETL"|""|"talend, big data,etl"|0
+"TE0075"|"TE0075"|"TECHNOLOGY"|"Talend Data Profiling"|"Talend"|"Talend Data Profiling"|""|"talend data profiling"|0
+"TE0076"|"TE0076"|"TECHNOLOGY"|"Talend Data Quality"|"Talend"|"Talend Data Quality"|""|"talend, data quality"|0
+"TE0077"|"TE0077"|"TECHNOLOGY"|"Talend Master Data Management"|"Talend"|"Talend Master Data Management"|""|"talend, master data management, mdm"|0
+"TE0078"|"TE0078"|"TECHNOLOGY"|"ThoughSpot"|"ThoughSpot"|"ThoughSpot"|""|"thoughspot"|0
+"TEX000"|"TEX000"|"TECHNOLOGY"|"Technology Other #0"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX001"|"TEX001"|"TECHNOLOGY"|"Technology Other #1"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX002"|"TEX002"|"TECHNOLOGY"|"Technology Other #2"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX003"|"TEX003"|"TECHNOLOGY"|"Technology Other #3"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX004"|"TEX004"|"TECHNOLOGY"|"Technology Other #4"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX005"|"TEX005"|"TECHNOLOGY"|"Technology Other #5"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX006"|"TEX006"|"TECHNOLOGY"|"Technology Other #6"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX007"|"TEX007"|"TECHNOLOGY"|"Technology Other #7"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX008"|"TEX008"|"TECHNOLOGY"|"Technology Other #8"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"TEX009"|"TEX009"|"TECHNOLOGY"|"Technology Other #9"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DC0001"|"DC0001"|"DISCIPLNE"|"Analytics Center of Excellence Design"|"Advanced Analytics"|"Analytics Center of Excellence Design"|""|"analytics center of excellence design"|0
+"DC0002"|"DC0002"|"DISCIPLNE"|"Analytics Implementation Tech Leadership"|"Advanced Analytics"|"Analytics Implementation Tech Leadership"|""|"analytics implementation tech leadership"|0
+"DC0003"|"DC0003"|"DISCIPLNE"|"Analytics Operationalization"|"Advanced Analytics"|"Analytics Operationalization"|""|"analytics operationalization"|0
+"DC0004"|"DC0004"|"DISCIPLNE"|"Data Profiling (Statistics)"|"Advanced Analytics"|"Data Profiling (Statistics)"|""|"data profiling (statistics)"|0
+"DC0005"|"DC0005"|"DISCIPLNE"|"Machine Learning Solution Design"|"Advanced Analytics"|"Machine Learning Solution Design"|""|"machine learning solution design"|0
+"DC0006"|"DC0006"|"DISCIPLNE"|"Statistical Model Design (e.g. using SAS, R)"|"Advanced Analytics"|"Statistical Model Design (e.g. using SAS, R)"|""|"statistical model design (e.g. using sas, r)"|0
+"DC0007"|"DC0007"|"DISCIPLNE"|"BI User Story Development"|"Business Analysis"|"BI User Story Development"|""|"bi user story development"|0
+"DC0008"|"DC0008"|"DISCIPLNE"|"Data Profiling"|"Business Analysis"|"Data Profiling"|""|"data profiling"|0
+"DC0009"|"DC0009"|"DISCIPLNE"|"Existing Report Decomposition"|"Business Analysis"|"Existing Report Decomposition"|""|"existing report decomposition"|0
+"DC0010"|"DC0010"|"DISCIPLNE"|"Information Modeling"|"Business Analysis"|"Information Modeling"|""|"information modeling"|0
+"DC0011"|"DC0011"|"DISCIPLNE"|"Metric & KPI Definition"|"Business Analysis"|"Metric & KPI Definition"|""|"metric & kpi definition"|0
+"DC0012"|"DC0012"|"DISCIPLNE"|"Pivot Table Analysis"|"Business Analysis"|"Pivot Table Analysis"|""|"pivot table analysis"|0
+"DC0013"|"DC0013"|"DISCIPLNE"|"Process-Driven Visualization Design"|"Business Analysis"|"Process-Driven Visualization Design"|""|"process-driven visualization design"|0
+"DC0014"|"DC0014"|"DISCIPLNE"|"Reference Data Management"|"Business Analysis"|"Reference Data Management"|""|"reference data management"|0
+"DC0015"|"DC0015"|"DISCIPLNE"|"Report Definition"|"Business Analysis"|"Report Definition"|""|"report definition"|0
+"DC0016"|"DC0016"|"DISCIPLNE"|"Architecture Design - AWS Data  Solution"|"Data Architecture"|"Architecture Design - AWS Data  Solution"|""|"architecture design - aws data  solution"|0
+"DC0017"|"DC0017"|"DISCIPLNE"|"Architecture Design - Azure Data Solution"|"Data Architecture"|"Architecture Design - Azure Data Solution"|""|"architecture design - azure data solution"|0
+"DC0018"|"DC0018"|"DISCIPLNE"|"Architecture Design - BI Solution"|"Data Architecture"|"Architecture Design - BI Solution"|""|"architecture design - bi solution"|0
+"DC0019"|"DC0019"|"DISCIPLNE"|"Architecture Design - General Cloud Data Solution"|"Data Architecture"|"Architecture Design - General Cloud Data Solution"|""|"architecture design - general cloud data solution"|0
+"DC0020"|"DC0020"|"DISCIPLNE"|"Architecture Design - Hadoop Solution"|"Data Architecture"|"Architecture Design - Hadoop Solution"|""|"architecture design - hadoop solution"|0
+"DC0021"|"DC0021"|"DISCIPLNE"|"Architecture Design - MDM Solution"|"Data Architecture"|"Architecture Design - MDM Solution"|""|"architecture design - mdm solution"|0
+"DC0022"|"DC0022"|"DISCIPLNE"|"Architecture Design - Spark Solution"|"Data Architecture"|"Architecture Design - Spark Solution"|""|"architecture design - spark solution"|0
+"DC0023"|"DC0023"|"DISCIPLNE"|"Data Analysis for ETL Specs"|"Data Architecture"|"Data Analysis for ETL Specs"|""|"data analysis for etl specs"|0
+"DC0024"|"DC0024"|"DISCIPLNE"|"Data Modeling - Centric Ref Arch"|"Data Architecture"|"Data Modeling - Centric Ref Arch"|""|"data modeling - centric ref arch"|0
+"DC0025"|"DC0025"|"DISCIPLNE"|"Data Modeling - Data Vault"|"Data Architecture"|"Data Modeling - Data Vault"|""|"data modeling - data vault"|0
+"DC0026"|"DC0026"|"DISCIPLNE"|"Data Modeling - Star Schema"|"Data Architecture"|"Data Modeling - Star Schema"|""|"data modeling - star schema"|0
+"DC0027"|"DC0027"|"DISCIPLNE"|"Data Warehouse Operationalization"|"Data Architecture"|"Data Warehouse Operationalization"|""|"data warehouse operationalization"|0
+"DC0028"|"DC0028"|"DISCIPLNE"|"MDM Imp. Team Leadership"|"Data Architecture"|"MDM Imp. Team Leadership"|""|"mdm imp. team leadership"|0
+"DC0029"|"DC0029"|"DISCIPLNE"|"Roadmap / Project Planning"|"Data Architecture"|"Roadmap / Project Planning"|""|"roadmap / project planning"|0
+"DC0030"|"DC0030"|"DISCIPLNE"|"Strategy Design - Business Intelligence"|"Data Architecture"|"Strategy Design - Business Intelligence"|""|"strategy design - business intelligence"|0
+"DC0031"|"DC0031"|"DISCIPLNE"|"Strategy Design - Enterprise Data"|"Data Architecture"|"Strategy Design - Enterprise Data"|""|"strategy design - enterprise data"|0
+"DC0032"|"DC0032"|"DISCIPLNE"|"Data Governance Program Implementation"|"Data Governance"|"Data Governance Program Implementation"|""|"data governance program implementation"|0
+"DC0033"|"DC0033"|"DISCIPLNE"|"Data Governance Strategy"|"Data Governance"|"Data Governance Strategy"|""|"data governance strategy"|0
+"DC0034"|"DC0034"|"DISCIPLNE"|"Semantic Layer Design"|"Data Visualization"|"Semantic Layer Design"|""|"semantic layer design"|0
+"DC0035"|"DC0035"|"DISCIPLNE"|"Architecture Design - General ETL Solution"|"ETL Architecture"|"Architecture Design - General ETL Solution"|""|"architecture design - general etl solution"|0
+"DC0036"|"DC0036"|"DISCIPLNE"|"Architecture Design - Informatica Solution"|"ETL Architecture"|"Architecture Design - Informatica Solution"|""|"architecture design - informatica solution"|0
+"DC0037"|"DC0037"|"DISCIPLNE"|"Architecture Design - SSIS Solution"|"ETL Architecture"|"Architecture Design - SSIS Solution"|""|"architecture design - ssis solution"|0
+"DC0038"|"DC0038"|"DISCIPLNE"|"Cloud ETL Solution Design"|"ETL Architecture"|"Cloud ETL Solution Design"|""|"cloud etl solution design"|0
+"DC0039"|"DC0039"|"DISCIPLNE"|"Cloud Imp. Tech Leadership"|"ETL Architecture"|"Cloud Imp. Tech Leadership"|""|"cloud imp. tech leadership"|0
+"DC0040"|"DC0040"|"DISCIPLNE"|"ETL Imp. Tech Leadership"|"ETL Architecture"|"ETL Imp. Tech Leadership"|""|"etl imp. tech leadership"|0
+"DC0041"|"DC0041"|"DISCIPLNE"|"ETL Template Design"|"ETL Architecture"|"ETL Template Design"|""|"etl template design"|0
+"DC0042"|"DC0042"|"DISCIPLNE"|"BI Scrum Master"|"Project Management"|"BI Scrum Master"|""|"bi scrum master"|0
+"DC0043"|"DC0043"|"DISCIPLNE"|"Executive Communication"|"Project Management"|"Executive Communication"|""|"executive communication"|0
+"DC0044"|"DC0044"|"DISCIPLNE"|"Scope Management"|"Project Management"|"Scope Management"|""|"scope management"|0
+"DC0045"|"DC0045"|"DISCIPLNE"|"Steering Committee Facilitation"|"Project Management"|"Steering Committee Facilitation"|""|"steering committee facilitation"|0
+"DCX000"|"DCX000"|"DISCIPLNE"|"Discpline Other #0"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX001"|"DCX001"|"DISCIPLNE"|"Discpline Other #1"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX002"|"DCX002"|"DISCIPLNE"|"Discpline Other #2"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX003"|"DCX003"|"DISCIPLNE"|"Discpline Other #3"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX004"|"DCX004"|"DISCIPLNE"|"Discpline Other #4"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX005"|"DCX005"|"DISCIPLNE"|"Discpline Other #5"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX006"|"DCX006"|"DISCIPLNE"|"Discpline Other #6"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX007"|"DCX007"|"DISCIPLNE"|"Discpline Other #7"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX008"|"DCX008"|"DISCIPLNE"|"Discpline Other #8"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"DCX009"|"DCX009"|"DISCIPLNE"|"Discpline Other #9"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LA0001"|"LA0001"|"LANGUAGE"|"Ajax"|"(General)"|"Ajax"|""|"ajax"|0
+"LA0002"|"LA0002"|"LANGUAGE"|"ANSI SQL"|"(General)"|"ANSI SQL"|""|"ansi sql"|0
+"LA0003"|"LA0003"|"LANGUAGE"|"C++"|"(General)"|"C++"|""|"c++"|0
+"LA0004"|"LA0004"|"LANGUAGE"|"Cobol"|"(General)"|"Cobol"|""|"cobol"|0
+"LA0005"|"LA0005"|"LANGUAGE"|"Haskell"|"(General)"|"Haskell"|""|"haskell"|0
+"LA0006"|"LA0006"|"LANGUAGE"|"MVC Framework"|"(General)"|"MVC Framework"|""|"mvc framework"|0
+"LA0007"|"LA0007"|"LANGUAGE"|"Node.js"|"(General)"|"Node.js"|""|"node.js"|0
+"LA0008"|"LA0008"|"LANGUAGE"|"Perl"|"(General)"|"Perl"|""|"perl"|0
+"LA0009"|"LA0009"|"LANGUAGE"|"PHP"|"(General)"|"PHP"|""|"php"|0
+"LA0010"|"LA0010"|"LANGUAGE"|"Python (General Use)"|"(General)"|"Python (General Use)"|""|"python (general use)"|0
+"LA0011"|"LA0011"|"LANGUAGE"|"Python (Analytics)"|"(General)"|"Python (Analytics)"|""|"python (analytics)"|0
+"LA0012"|"LA0012"|"LANGUAGE"|"R"|"(General)"|"R"|""|"r"|0
+"LA0013"|"LA0013"|"LANGUAGE"|"Regular Expressions"|"(General)"|"Regular Expressions"|""|"regular expressions"|0
+"LA0014"|"LA0014"|"LANGUAGE"|"Ruby"|"(General)"|"Ruby"|""|"ruby"|0
+"LA0015"|"LA0015"|"LANGUAGE"|"Scala"|"(General)"|"Scala"|""|"scala"|0
+"LA0016"|"LA0016"|"LANGUAGE"|"Swift"|"Apple"|"Swift"|""|"swift"|0
+"LA0017"|"LA0017"|"LANGUAGE"|"Go"|"Google"|"Go"|""|"go"|0
+"LA0018"|"LA0018"|"LANGUAGE"|"SQL PL "|"IBM"|"SQL PL "|""|"sql pl "|0
+"LA0019"|"LA0019"|"LANGUAGE"|"C#"|"Microsoft"|"C#"|""|"c#"|0
+"LA0020"|"LA0020"|"LANGUAGE"|"DAX"|"Microsoft"|"DAX"|""|"dax"|0
+"LA0021"|"LA0021"|"LANGUAGE"|"F#"|"Microsoft"|"F#"|""|"f#"|0
+"LA0022"|"LA0022"|"LANGUAGE"|"MDX"|"Microsoft"|"MDX"|""|"mdx"|0
+"LA0023"|"LA0023"|"LANGUAGE"|"t-SQL"|"Microsoft"|"t-SQL"|""|"t-sql"|0
+"LA0024"|"LA0024"|"LANGUAGE"|"VB.NET"|"Microsoft"|"VB.NET"|""|"vb.net"|0
+"LA0025"|"LA0025"|"LANGUAGE"|"VBA"|"Microsoft"|"VBA"|""|"vba"|0
+"LA0026"|"LA0026"|"LANGUAGE"|"Java"|"Oracle"|"Java"|""|"java"|0
+"LA0027"|"LA0027"|"LANGUAGE"|"Javascript"|"Oracle"|"Javascript"|""|"javascript"|0
+"LA0028"|"LA0028"|"LANGUAGE"|"jQuery"|"Oracle"|"jQuery"|""|"jquery"|0
+"LA0029"|"LA0029"|"LANGUAGE"|"pl/SQL"|"Oracle"|"pl/SQL"|""|"pl/sql"|0
+"LA0030"|"LA0030"|"LANGUAGE"|"CSS"|"W3C"|"CSS"|""|"css"|0
+"LA0031"|"LA0031"|"LANGUAGE"|"HTML"|"W3C"|"HTML"|""|"html"|0
+"LA0032"|"LA0032"|"LANGUAGE"|"XSLT / Xpath"|"W3C"|"XSLT / Xpath"|""|"xslt / xpath"|0
+"LA0033"|"LA0033"|"LANGUAGE"|"XML"|"W3C"|"XML"|""|"xml"|0
+"LAX000"|"LAX000"|"LANGUAGE"|"Language Other #0"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX001"|"LAX001"|"LANGUAGE"|"Language Other #1"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX002"|"LAX002"|"LANGUAGE"|"Language Other #2"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX003"|"LAX003"|"LANGUAGE"|"Language Other #3"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX004"|"LAX004"|"LANGUAGE"|"Language Other #4"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX005"|"LAX005"|"LANGUAGE"|"Language Other #5"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX006"|"LAX006"|"LANGUAGE"|"Language Other #6"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX007"|"LAX007"|"LANGUAGE"|"Language Other #7"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX008"|"LAX008"|"LANGUAGE"|"Language Other #8"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"LAX009"|"LAX009"|"LANGUAGE"|"Language Other #9"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"IN0001"|"IN0001"|"INDUSTRY"|"(General Communications)"|"Communications"|"(General Communications)"|""|"(general communications)"|0
+"IN0002"|"IN0002"|"INDUSTRY"|"Publications"|"Communications"|"Publications"|""|"publications"|0
+"IN0003"|"IN0003"|"INDUSTRY"|"Radio and TV"|"Communications"|"Radio and TV"|""|"radio and tv"|0
+"IN0004"|"IN0004"|"INDUSTRY"|"(General Education)"|"Education"|"(General Education)"|""|"(general education)"|0
+"IN0005"|"IN0005"|"INDUSTRY"|"Post-Secondary"|"Education"|"Post-Secondary"|""|"post-secondary"|0
+"IN0006"|"IN0006"|"INDUSTRY"|"Primary"|"Education"|"Primary"|""|"primary"|0
+"IN0007"|"IN0007"|"INDUSTRY"|"Secondary"|"Education"|"Secondary"|""|"secondary"|0
+"IN0008"|"IN0008"|"INDUSTRY"|"(General Energy & Utilities)"|"Energy & Utilitites"|"(General Energy & Utilities)"|""|"(general energy & utilities)"|0
+"IN0009"|"IN0009"|"INDUSTRY"|"Crude Pipeline"|"Energy & Utilitites"|"Crude Pipeline"|""|"crude pipeline"|0
+"IN0010"|"IN0010"|"INDUSTRY"|"Eletric Utility"|"Energy & Utilitites"|"Eletric Utility"|""|"eletric utility"|0
+"IN0011"|"IN0011"|"INDUSTRY"|"Natural Gas"|"Energy & Utilitites"|"Natural Gas"|""|"natural gas"|0
+"IN0012"|"IN0012"|"INDUSTRY"|"(General Government)"|"Government"|"(General Government)"|""|"(general government)"|0
+"IN0013"|"IN0013"|"INDUSTRY"|"Federal"|"Government"|"Federal"|""|"federal"|0
+"IN0014"|"IN0014"|"INDUSTRY"|"Housing"|"Government"|"Housing"|""|"housing"|0
+"IN0015"|"IN0015"|"INDUSTRY"|"State and Local"|"Government"|"State and Local"|""|"state and local"|0
+"IN0016"|"IN0016"|"INDUSTRY"|"Workers Comp"|"Government"|"Workers Comp"|""|"workers comp"|0
+"IN0017"|"IN0017"|"INDUSTRY"|"(General Healthcare)"|"Healthcare"|"(General Healthcare)"|""|"(general healthcare)"|0
+"IN0018"|"IN0018"|"INDUSTRY"|"Health System"|"Healthcare"|"Health System"|""|"health system"|0
+"IN0019"|"IN0019"|"INDUSTRY"|"Life Sciences"|"Healthcare"|"Life Sciences"|""|"life sciences"|0
+"IN0020"|"IN0020"|"INDUSTRY"|"Payer "|"Healthcare"|"Payer "|""|"payer "|0
+"IN0021"|"IN0021"|"INDUSTRY"|"Provider"|"Healthcare"|"Provider"|""|"provider"|0
+"IN0022"|"IN0022"|"INDUSTRY"|"Veterinary"|"Healthcare"|"Veterinary"|""|"veterinary"|0
+"IN0023"|"IN0023"|"INDUSTRY"|"(General Insurance)"|"Insurance"|"(General Insurance)"|""|"(general insurance)"|0
+"IN0024"|"IN0024"|"INDUSTRY"|"Life & Annuities"|"Insurance"|"Life & Annuities"|""|"life & annuities"|0
+"IN0025"|"IN0025"|"INDUSTRY"|"Property & Casualty"|"Insurance"|"Property & Casualty"|""|"property & casualty"|0
+"IN0026"|"IN0026"|"INDUSTRY"|"Specialty"|"Insurance"|"Specialty"|""|"specialty"|0
+"IN0027"|"IN0027"|"INDUSTRY"|"(General Manufacturing)"|"Manufacturing"|"(General Manufacturing)"|""|"(general manufacturing)"|0
+"IN0028"|"IN0028"|"INDUSTRY"|"(General Pharmaceutical)"|"Pharmaceutical"|"(General Pharmaceutical)"|""|"(general pharmaceutical)"|0
+"IN0029"|"IN0029"|"INDUSTRY"|"(General Retail)"|"Retail"|"(General Retail)"|""|"(general retail)"|0
+"IN0030"|"IN0030"|"INDUSTRY"|"Apparel"|"Retail"|"Apparel"|""|"apparel"|0
+"IN0031"|"IN0031"|"INDUSTRY"|"Consumer Goods"|"Retail"|"Consumer Goods"|""|"consumer goods"|0
+"IN0032"|"IN0032"|"INDUSTRY"|"Multi-Level Marketing"|"Retail"|"Multi-Level Marketing"|""|"multi-level marketing"|0
+"IN0033"|"IN0033"|"INDUSTRY"|"(General Services)"|"Services"|"(General Services)"|""|"(general services)"|0
+"IN0034"|"IN0034"|"INDUSTRY"|"Consulting"|"Services"|"Consulting"|""|"consulting"|0
+"IN0035"|"IN0035"|"INDUSTRY"|"Repair & Maintenance"|"Services"|"Repair & Maintenance"|""|"repair & maintenance"|0
+"IN0036"|"IN0036"|"INDUSTRY"|"(General Transportation)"|"Transportation"|"(General Transportation)"|""|"(general transportation)"|0
+"IN0037"|"IN0037"|"INDUSTRY"|"Aviation"|"Transportation"|"Aviation"|""|"aviation"|0
+"IN0038"|"IN0038"|"INDUSTRY"|"Rail"|"Transportation"|"Rail"|""|"rail"|0
+"IN0039"|"IN0039"|"INDUSTRY"|"Road / Truck"|"Transportation"|"Road / Truck"|""|"road / truck"|0
+"IN0040"|"IN0040"|"INDUSTRY"|"(General Travel & Tourism)"|"Travel & Tourism"|"(General Travel & Tourism)"|""|"(general travel & tourism)"|0
+"IN0041"|"IN0041"|"INDUSTRY"|"Cruise"|"Travel & Tourism"|"Cruise"|""|"cruise"|0
+"IN0042"|"IN0042"|"INDUSTRY"|"Gambling / Casino"|"Travel & Tourism"|"Gambling / Casino"|""|"gambling / casino"|0
+"IN0043"|"IN0043"|"INDUSTRY"|"Hotel"|"Travel & Tourism"|"Hotel"|""|"hotel"|0
+"INX000"|"INX000"|"INDUSTRY"|"Industry Other #0"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX001"|"INX001"|"INDUSTRY"|"Industry Other #1"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX002"|"INX002"|"INDUSTRY"|"Industry Other #2"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX003"|"INX003"|"INDUSTRY"|"Industry Other #3"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX004"|"INX004"|"INDUSTRY"|"Industry Other #4"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX005"|"INX005"|"INDUSTRY"|"Industry Other #5"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX006"|"INX006"|"INDUSTRY"|"Industry Other #6"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX007"|"INX007"|"INDUSTRY"|"Industry Other #7"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX008"|"INX008"|"INDUSTRY"|"Industry Other #8"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"INX009"|"INX009"|"INDUSTRY"|"Industry Other #9"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SA0001"|"SA0001"|"SUBJECT AREA"|"Finance"|"(General)"|"Finance"|""|"finance"|0
+"SA0002"|"SA0002"|"SUBJECT AREA"|"GDPR Regulation"|"(General)"|"GDPR Regulation"|""|"gdpr regulation"|0
+"SA0003"|"SA0003"|"SUBJECT AREA"|"Human Resources"|"(General)"|"Human Resources"|""|"human resources"|0
+"SA0004"|"SA0004"|"SUBJECT AREA"|"Internationalization"|"(General)"|"Internationalization"|""|"internationalization"|0
+"SA0005"|"SA0005"|"SUBJECT AREA"|"Marketing"|"(General)"|"Marketing"|""|"marketing"|0
+"SA0006"|"SA0006"|"SUBJECT AREA"|"Purchasing & Procurement"|"(General)"|"Purchasing & Procurement"|""|"purchasing & procurement"|0
+"SA0007"|"SA0007"|"SUBJECT AREA"|"Sales"|"(General)"|"Sales"|""|"sales"|0
+"SA0008"|"SA0008"|"SUBJECT AREA"|"Security"|"(General)"|"Security"|""|"security"|0
+"SA0009"|"SA0009"|"SUBJECT AREA"|"Survey"|"(General)"|"Survey"|""|"survey"|0
+"SA0010"|"SA0010"|"SUBJECT AREA"|"Web Analytics"|"(General)"|"Web Analytics"|""|"web analytics"|0
+"SA0011"|"SA0011"|"SUBJECT AREA"|"Investment Performance"|"Capital Management"|"Investment Performance"|""|"investment performance"|0
+"SA0012"|"SA0012"|"SUBJECT AREA"|"Banking"|"Financial Services"|"Banking"|""|"banking"|0
+"SA0013"|"SA0013"|"SUBJECT AREA"|"Mortgage & Loan"|"Financial Services"|"Mortgage & Loan"|""|"mortgage & loan"|0
+"SA0014"|"SA0014"|"SUBJECT AREA"|"Real Estate"|"Financial Services"|"Real Estate"|""|"real estate"|0
+"SA0015"|"SA0015"|"SUBJECT AREA"|"Medicare / Medicaid"|"Government"|"Medicare / Medicaid"|""|"medicare / medicaid"|0
+"SA0016"|"SA0016"|"SUBJECT AREA"|"Smart City"|"Government"|"Smart City"|""|"smart cities"|0
+"SA0017"|"SA0017"|"SUBJECT AREA"|"Workers Comp"|"Government"|"Workers Comp"|""|"workers comp"|0
+"SA0018"|"SA0018"|"SUBJECT AREA"|"Healthcare Claims"|"Healthcare"|"Claims"|""|"claims"|0
+"SA0019"|"SA0019"|"SUBJECT AREA"|"Clinical"|"Healthcare"|"Clinical"|""|"clinical"|0
+"SA0020"|"SA0020"|"SUBJECT AREA"|"HIPAA Regulation"|"Healthcare"|"HIPAA Regulation"|""|"hipaa regulation"|0
+"SA0021"|"SA0021"|"SUBJECT AREA"|"Industry Ratings (e.g. Star)"|"Healthcare"|"Industry Ratings (e.g. Star)"|""|"industry ratings (e.g. star)"|0
+"SA0022"|"SA0022"|"SUBJECT AREA"|"Laboratory"|"Healthcare"|"Laboratory"|""|"laboratory"|0
+"SA0023"|"SA0023"|"SUBJECT AREA"|"Patient / EHR"|"Healthcare"|"Patient / EHR"|""|"patient / ehr"|0
+"SA0024"|"SA0024"|"SUBJECT AREA"|"Billing"|"Insurance"|"Billing"|""|"billing"|0
+"SA0025"|"SA0025"|"SUBJECT AREA"|"Insurance Claims"|"Insurance"|"Claims"|""|"claims"|0
+"SA0026"|"SA0026"|"SUBJECT AREA"|"Policy"|"Insurance"|"Policy"|""|"policy"|0
+"SA0027"|"SA0027"|"SUBJECT AREA"|"Statutory Reporting"|"Insurance"|"Statutory Reporting"|""|"statutory reporting"|0
+"SA0028"|"SA0028"|"SUBJECT AREA"|"Distribution"|"Manufacturing"|"Distribution"|""|"distribution"|0
+"SA0029"|"SA0029"|"SUBJECT AREA"|"Inventory"|"Manufacturing"|"Inventory"|""|"inventory"|0
+"SA0030"|"SA0030"|"SUBJECT AREA"|"Logistics"|"Manufacturing"|"Logistics"|""|"logistics"|0
+"SA0031"|"SA0031"|"SUBJECT AREA"|"Supply Chain"|"Manufacturing"|"Supply Chain"|""|"supply chain"|0
+"SA0032"|"SA0032"|"SUBJECT AREA"|"Attribution"|"Marketing"|"Attribution"|""|"attribution"|0
+"SA0033"|"SA0033"|"SUBJECT AREA"|"Brand Management"|"Marketing"|"Brand Management"|""|"brand management"|0
+"SA0034"|"SA0034"|"SUBJECT AREA"|"Campaign Management"|"Marketing"|"Campaign Management"|""|"campaign management"|0
+"SA0035"|"SA0035"|"SUBJECT AREA"|"Marketing Customer Loyalty"|"Marketing"|"Customer Loyalty"|""|"customer loyalty"|0
+"SA0036"|"SA0036"|"SUBJECT AREA"|"Public Relations"|"Marketing"|"Public Relations"|""|"public relations"|0
+"SA0037"|"SA0037"|"SUBJECT AREA"|"SEO"|"Marketing"|"SEO"|""|"seo"|0
+"SA0038"|"SA0038"|"SUBJECT AREA"|"Credit Risk"|"Retail"|"Credit Risk"|""|"credit risk"|0
+"SA0039"|"SA0039"|"SUBJECT AREA"|"Retail Customer Loyalty"|"Retail"|"Customer Loyalty"|""|"customer loyalty"|0
+"SA0040"|"SA0040"|"SUBJECT AREA"|"Demand Planning"|"Retail"|"Demand Planning"|""|"demand planning"|0
+"SA0041"|"SA0041"|"SUBJECT AREA"|"Fraud Detection"|"Retail"|"Fraud Detection"|""|"fraud detection"|0
+"SA0042"|"SA0042"|"SUBJECT AREA"|"Price Modeling"|"Retail"|"Price Modeling"|""|"price modeling"|0
+"SA0043"|"SA0043"|"SUBJECT AREA"|"Stock Optimization"|"Retail"|"Stock Optimization"|""|"stock optimization"|0
+"SA0044"|"SA0044"|"SUBJECT AREA"|"Store Performance"|"Retail"|"Store Performance"|""|"store performance"|0
+"SAX000"|"SAX000"|"SUBJECT AREA"|"Subject Area Other #0"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX001"|"SAX001"|"SUBJECT AREA"|"Subject Area Other #1"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX002"|"SAX002"|"SUBJECT AREA"|"Subject Area Other #2"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX003"|"SAX003"|"SUBJECT AREA"|"Subject Area Other #3"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX004"|"SAX004"|"SUBJECT AREA"|"Subject Area Other #4"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX005"|"SAX005"|"SUBJECT AREA"|"Subject Area Other #5"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX006"|"SAX006"|"SUBJECT AREA"|"Subject Area Other #6"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX007"|"SAX007"|"SUBJECT AREA"|"Subject Area Other #7"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX008"|"SAX008"|"SUBJECT AREA"|"Subject Area Other #8"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1
+"SAX009"|"SAX009"|"SUBJECT AREA"|"Subject Area Other #9"|"ZZZ Other"|"{Enter Value Here}"|""|"{enter value here}"|1

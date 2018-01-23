@@ -21,16 +21,16 @@ namespace Centric.SkillSurvey.Models
     [Key, Column(Order = 1)]
     public DateTime SnapshotTimestamp { get; set; }
 
-    [Required, MaxLength(200)]
+    [MaxLength(200)]
     public string EmployerDesc { get; set; }
 
     [MaxLength(200)]
     public string FirstName { get; set; }
 
-    [Required, MaxLength(200)]
+    [MaxLength(200)]
     public string LastName { get; set; }
     
-    [Required, MaxLength(200)]
+    [MaxLength(200)]
     public string EmailAddress { get; set; }
 
     [Required, MaxLength(200)]
@@ -51,7 +51,7 @@ namespace Centric.SkillSurvey.Models
       }
     }
 
-    public string GetRespondantInfo()
+    public string GetRespondentInfo()
     {
       return string.Format("{0} | {1}", this.ResourceLabel, this.EmailAddress);
     }

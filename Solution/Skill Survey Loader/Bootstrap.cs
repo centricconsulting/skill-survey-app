@@ -57,7 +57,7 @@ namespace Centric.SkillSurvey
     private static List<Aspect> GetAspectList()
     {
 
-      string FilePath = @"C:\Development\Solutions\GitHub\skill-survey-app\Skill Survey Loader\Data\Aspects.txt";
+      string FilePath = @"C:\Development\Solutions\GitHub\skill-survey-app\Solution\Skill Survey Loader\Data\Aspects.txt";
       // File Columns: AspectUID, AspectCode, AspectName, AspectLabel, AspectDesc
 
       List<Aspect> list = new List<Aspect>();
@@ -98,7 +98,7 @@ namespace Centric.SkillSurvey
     private static List<AspectRating> GetAspectRatingList()
     {
 
-      string FilePath = @"C:\Development\Solutions\GitHub\skill-survey-app\Skill Survey Loader\Data\AspectRatings.txt";
+      string FilePath = @"C:\Development\Solutions\GitHub\skill-survey-app\Solution\Skill Survey Loader\Data\AspectRatings.txt";
       // File Columns: AspectUID, RatingValue, RatingName, RatingLabel, RatingDesc
 
       List<AspectRating> list = new List<AspectRating>();
@@ -141,7 +141,7 @@ namespace Centric.SkillSurvey
     private static List<Skill> GetSkillList()
     {
 
-      string FilePath = @"C:\Development\Solutions\GitHub\skill-survey-app\Skill Survey Loader\Data\Skills.txt";
+      string FilePath = @"C:\Development\Solutions\GitHub\skill-survey-app\Solution\Skill Survey Loader\Data\Skills.txt";
       // File Columns: SkillUID, SkillCode, SkillClassUID, SkillName, SkillCategoryName, SkillLabel, SkillDesc
 
       List<Skill> list = new List<Skill>();
@@ -172,7 +172,8 @@ namespace Centric.SkillSurvey
               SkillCategoryName = fields[4],
               SkillLabel = fields[5],
               SkillDescription = fields[6],
-              OtherFlag = byte.Parse(fields[7])
+              SkillTagList = fields[7],
+              OtherFlag = byte.Parse(fields[8])
             });
           }
         }

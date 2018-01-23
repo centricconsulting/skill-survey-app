@@ -34,7 +34,7 @@ namespace Centric.SkillSurvey.Repositories
           AspectUID = p.AspectUID,
           SnapshotTimestamp = p.SnapshotTimestamp,
           RatingValue = p.RatingValue,
-          RespondantInfo = p.RespondantInfo
+          RespondentInfo = p.RespondentInfo
         };
 
       return list;
